@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Zhyar | Personal Links</title>
+<title>SHAHRAM | Personal Links</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -258,7 +258,7 @@ body{
 
     font-family:'Anton',sans-serif;
 
-    font-size:clamp(48px, 16vw, 72px);
+    font-size:clamp(42px, 13vw, 68px);
 
     line-height:1;
 
@@ -375,7 +375,6 @@ body{
 .link:nth-child(2){ animation-delay:.14s; }
 .link:nth-child(3){ animation-delay:.20s; }
 .link:nth-child(4){ animation-delay:.26s; }
-.link:nth-child(5){ animation-delay:.32s; }
 
 .link::before{
     content:"";
@@ -510,17 +509,6 @@ body{
    ACTIVE COLORS
 ========================= */
 
-.link.active.facebook{
-    background:linear-gradient(135deg,rgba(24,119,242,.28),rgba(24,119,242,.12));
-    border-color:rgba(24,119,242,.55);
-    box-shadow:0 14px 35px rgba(24,119,242,.22);
-}
-.link.active.facebook .link-icon{
-    background:#1877F2;
-    border-color:#1877F2;
-    box-shadow:0 8px 28px rgba(24,119,242,.45);
-}
-
 .link.active.instagram{
     background:linear-gradient(135deg,rgba(131,58,180,.28),rgba(253,29,29,.18),rgba(252,175,69,.16));
     border-color:rgba(225,48,108,.55);
@@ -565,88 +553,6 @@ body{
     border-color:#00f2ea;
     color:#fff;
     box-shadow:-3px 0 0 rgba(255,0,80,.65),3px 0 0 rgba(0,242,234,.65),0 8px 28px rgba(0,242,234,.22);
-}
-
-/* =========================
-   WEBSITE / TELEGRAM
-========================= */
-
-.bottom{
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:12px;
-
-    margin-top:13px;
-}
-
-.bottom a{
-    min-height:60px;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    gap:9px;
-
-    text-decoration:none;
-
-    color:white;
-
-    border-radius:19px;
-
-    background:rgba(255,255,255,.055);
-
-    border:1px solid rgba(255,255,255,.1);
-
-    backdrop-filter:blur(15px);
-    -webkit-backdrop-filter:blur(15px);
-
-    font-size:13px;
-
-    font-weight:600;
-
-    transition:transform .3s ease, background .3s ease, border-color .3s ease;
-
-    white-space:nowrap;
-
-    contain:layout style paint;
-    isolation:isolate;
-    transform:translateZ(0);
-    backface-visibility:hidden;
-    -webkit-backface-visibility:hidden;
-}
-
-.bottom a:hover{
-    transform:translateY(-3px) translateZ(0);
-
-    background:rgba(255,255,255,.10);
-
-    border-color:rgba(255,255,255,.2);
-}
-
-.bottom i{
-    font-size:17px;
-}
-
-.bottom a.active.website{
-    background:linear-gradient(135deg,rgba(120,120,255,.28),rgba(120,120,255,.12));
-    border-color:rgba(120,120,255,.55);
-    box-shadow:0 14px 35px rgba(120,120,255,.22);
-}
-.bottom a.active.website i{
-    color:#8f8fff;
-}
-
-.bottom a.active.telegram{
-    background:linear-gradient(135deg,rgba(0,136,204,.28),rgba(0,136,204,.12));
-    border-color:rgba(0,136,204,.6);
-    box-shadow:0 14px 35px rgba(0,136,204,.28);
-}
-.bottom a.active.telegram i{
-    color:#29b6f6;
 }
 
 /* =========================
@@ -743,12 +649,6 @@ body{
     .link-sub{
         font-size:13px;
     }
-
-    .bottom a{
-        min-height:64px;
-        font-size:14px;
-        border-radius:21px;
-    }
 }
 
 /* =========================
@@ -811,12 +711,6 @@ body{
         height:38px;
     }
 
-    .bottom a{
-        min-height:68px;
-        font-size:15px;
-        border-radius:22px;
-    }
-
     .footer{
         margin-top:28px;
         font-size:12px;
@@ -846,10 +740,6 @@ body{
     .link{
         min-height:68px;
         border-radius:19px;
-    }
-
-    .bottom a{
-        min-height:56px;
     }
 }
 
@@ -911,16 +801,6 @@ body{
     .arrow i{
         font-size:12px;
     }
-
-    .bottom a{
-        min-height:52px;
-        font-size:12px;
-        border-radius:16px;
-    }
-
-    .bottom i{
-        font-size:15px;
-    }
 }
 
 /* =========================
@@ -953,8 +833,7 @@ body{
 @media (max-width:1024px), (hover:none) and (pointer:coarse){
 
     /* 1. لابردنی backdrop-filter */
-    .link,
-    .bottom a{
+    .link{
         backdrop-filter:none !important;
         -webkit-backdrop-filter:none !important;
         background:rgba(255,255,255,.07) !important;
@@ -1002,14 +881,12 @@ body{
     }
 
     /* 7. transition سووکتر */
-    .link,
-    .bottom a{
+    .link{
         transition:background .2s ease, border-color .2s ease !important;
     }
 
     /* 8. لابردنی hover effect */
-    .link:hover,
-    .bottom a:hover{
+    .link:hover{
         transform:none !important;
         box-shadow:none !important;
     }
@@ -1039,21 +916,9 @@ body{
 
 /* ==========================================
    FIX — ACTIVE COLOR ON MOBILE
-   ڕەنگی پلاتفۆرم لە مۆبایل کار بکات
 ========================================== */
 
 @media (max-width:1024px), (hover:none) and (pointer:coarse){
-
-    /* Facebook active */
-    .link.active.facebook{
-        background:linear-gradient(135deg,rgba(24,119,242,.28),rgba(24,119,242,.12)) !important;
-        border-color:rgba(24,119,242,.55) !important;
-    }
-    .link.active.facebook .link-icon{
-        background:#1877F2 !important;
-        border-color:#1877F2 !important;
-        box-shadow:0 8px 28px rgba(24,119,242,.45) !important;
-    }
 
     /* Instagram active */
     .link.active.instagram{
@@ -1101,29 +966,8 @@ body{
         box-shadow:-3px 0 0 rgba(255,0,80,.65),3px 0 0 rgba(0,242,234,.65),0 8px 28px rgba(0,242,234,.22) !important;
     }
 
-    /* Website active */
-    .bottom a.active.website{
-        background:linear-gradient(135deg,rgba(120,120,255,.28),rgba(120,120,255,.12)) !important;
-        border-color:rgba(120,120,255,.55) !important;
-        box-shadow:0 14px 35px rgba(120,120,255,.22) !important;
-    }
-    .bottom a.active.website i{
-        color:#8f8fff !important;
-    }
-
-    /* Telegram active */
-    .bottom a.active.telegram{
-        background:linear-gradient(135deg,rgba(0,136,204,.28),rgba(0,136,204,.12)) !important;
-        border-color:rgba(0,136,204,.6) !important;
-        box-shadow:0 14px 35px rgba(0,136,204,.28) !important;
-    }
-    .bottom a.active.telegram i{
-        color:#29b6f6 !important;
-    }
-
     /* ⚠️ گرنگ: hover دەبێت active تێکنەشکێنێت */
-    .link.active:hover,
-    .bottom a.active:hover{
+    .link.active:hover{
         transform:none !important;
     }
 }
@@ -1157,12 +1001,12 @@ body{
     <div class="hero">
 
         <img
-            src="https://i.ibb.co/JRqQpJ8T/z.jpg"
-            alt="Zhyar"
+            src="https://i.ibb.co/BHbV2W6d/shahram.jpg"
+            alt="SHAHRAM"
         >
 
         <div class="name">
-            ZHYAR
+            SHAHRAM
         </div>
 
     </div>
@@ -1171,34 +1015,9 @@ body{
     <div class="links">
 
         <a
-            class="link facebook"
-            data-platform="facebook"
-            href="https://www.facebook.com/share/1C8hVkDZjX/"
-            target="_blank"
-        >
-            <div class="link-icon">
-                <i class="fa-brands fa-facebook-f"></i>
-            </div>
-
-            <div class="link-text">
-                <div class="link-title">
-                    Facebook
-                </div>
-                <div class="link-sub">
-                    Follow me on Facebook
-                </div>
-            </div>
-
-            <div class="arrow">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </div>
-        </a>
-
-
-        <a
             class="link instagram"
             data-platform="instagram"
-            href="https://www.instagram.com/s.zhy4r?stkn=bzFzd3FybzRoZDR0"
+            href="https://www.instagram.com/shahram_xalid?xtok=MWxld3llMDlid3Q5cw%3D%3D&utm_source=qr"
             target="_blank"
         >
             <div class="link-icon">
@@ -1223,7 +1042,7 @@ body{
         <a
             class="link snapchat"
             data-platform="snapchat"
-            href="https://www.snapchat.com/add/im.zhyo?share_id=xEAwtg1iwf8&locale=en-US"
+            href="https://snapchat.com/t/2kdVvfXe"
             target="_blank"
         >
             <div class="link-icon">
@@ -1248,7 +1067,7 @@ body{
         <a
             class="link whatsapp"
             data-platform="whatsapp"
-            href="https://wa.me/9647503983598"
+            href="https://wa.me/9647517534128"
             target="_blank"
         >
             <div class="link-icon">
@@ -1273,7 +1092,7 @@ body{
         <a
             class="link tiktok"
             data-platform="tiktok"
-            href="https://www.tiktok.com/@zhizhimod?_r=1&_t=ZS-9A7LwFEo4dZ"
+            href="https://www.tiktok.com/@sh4hram..0?_r=1&_t=ZS-9Aw9CMEJWZI"
             target="_blank"
         >
             <div class="link-icon">
@@ -1297,34 +1116,8 @@ body{
     </div>
 
 
-    <div class="bottom">
-
-        <a
-            class="website"
-            data-platform="website"
-            href="https://zhizhimod.online/"
-            target="_blank"
-        >
-            <i class="fa-solid fa-globe"></i>
-            Website
-        </a>
-
-
-        <a
-            class="telegram"
-            data-platform="telegram"
-            href="https://t.me/zhy4arr"
-            target="_blank"
-        >
-            <i class="fa-brands fa-telegram"></i>
-            Telegram
-        </a>
-
-    </div>
-
-
     <div class="footer">
-        © 2026 Zhyar
+        © 2026 SHAHRAM
     </div>
 
 </div>
@@ -1349,31 +1142,6 @@ linkCards.forEach(card => {
         });
 
         /* زیادکردنی active بۆ ئەم کارتە */
-        this.classList.add("active");
-
-    });
-
-});
-
-
-/* ==========================================
-   BOTTOM BUTTONS — ORIGINAL COLOR AFTER CLICK
-========================================== */
-
-const bottomButtons =
-    document.querySelectorAll(".bottom a");
-
-bottomButtons.forEach(btn => {
-
-    btn.addEventListener("click", function(){
-
-        /* لابردنی active لە هەموو دوگمەکان + blur */
-        bottomButtons.forEach(item => {
-            item.classList.remove("active");
-            item.blur();
-        });
-
-        /* زیادکردنی active بۆ ئەم دوگمەیە */
         this.classList.add("active");
 
     });
